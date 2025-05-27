@@ -14,31 +14,31 @@ namespace Commando_project
     }
     internal class Commando
     {
-        public string _name { get; set; }
-        public string _codeName { get; set; }
+        public string Name { get; set; }
+        public string CodeName { get; set; }
         private string[] _tools = { "Hammer, chisel, rope, bag, water bottle"};
         private Status _currentstatus;
 
         public Commando (string name, string codeName)
         {
-            _name = name;
-            _codeName = codeName;
+            Name = name;
+            CodeName = codeName;
             _currentstatus = Status.Standing;
         }
 
         public void Walk()
         {
-            Console.WriteLine($"{_name}; is {Status.Walking} ");
+            Console.WriteLine($"{Name}; is {Status.Walking} ");
             _currentstatus = Status.Walking;
         }
         public void Hide()
         {
             _currentstatus =Status.Hiding;
-            Console.WriteLine($" {_name} is {_currentstatus}");
+            Console.WriteLine($" {Name} is {_currentstatus}");
         }
         public void Attack()
         {
-            Console.WriteLine($"{_name} is attacks");
+            Console.WriteLine($"{Name} is attacks");
         }
     }
 }

@@ -8,24 +8,24 @@ namespace Commando_project
 {
     internal class Weapon
     {
-        public string _name {  get; set; }
-        public string _manufacturer {  get; set; }
-        public int _amountOfBalls { get; set; }
+        public string Name {  get; set; }
+        public string Manufacturer {  get; set; }
+        public int AmountOfBalls { get; set; }
 
 
         public Weapon(string name ,string manufacturer,int amountOfBalls)
         {
-            _name = name;
-            _manufacturer = manufacturer;
-            _amountOfBalls = amountOfBalls;
+            Name = name;
+            Manufacturer = manufacturer;
+            AmountOfBalls = amountOfBalls;
         }
 
         public void Shoot()
         {
-            if (_amountOfBalls > 0)
+            if (AmountOfBalls > 0)
             {
                 Console.WriteLine("A shot was fired.");
-                _amountOfBalls--;
+                AmountOfBalls--;
             }
             else
             {
