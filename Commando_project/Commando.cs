@@ -36,7 +36,7 @@ namespace Commando_project
             _currentstatus =Status.Hiding;
             Console.WriteLine($" {_name} is {_currentstatus}");
         }
-        public void Attack()
+        public virtual void Attack()
         {
             Console.WriteLine($"{_name} is attacks");
         }
