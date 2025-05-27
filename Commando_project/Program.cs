@@ -10,6 +10,10 @@ namespace Commando_project
     {
         static void Main(string[] args)
         {
+            Commando c = new Commando("aaa","jk");
+            Console.WriteLine(c._codeName);
+            c._codeName = "hhh";
+            Console.WriteLine(c.SayName("GENERAL"));
         }
     }
 }

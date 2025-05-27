@@ -14,31 +14,46 @@ namespace Commando_project
     }
     internal class Commando
     {
-        public string Name { get; set; }
-        public string CodeName { get; set; }
+        private string _name;
+        public string _codeName { get ; set; }
         private string[] _tools = { "Hammer, chisel, rope, bag, water bottle"};
         private Status _currentstatus;
 
         public Commando (string name, string codeName)
         {
-            Name = name;
-            CodeName = codeName;
+            _name = name;
+            _codeName = codeName;
             _currentstatus = Status.Standing;
         }
 
         public void Walk()
         {
-            Console.WriteLine($"{Name}; is {Status.Walking} ");
+            Console.WriteLine($"{_name}; is {Status.Walking} ");
             _currentstatus = Status.Walking;
         }
         public void Hide()
         {
             _currentstatus =Status.Hiding;
-            Console.WriteLine($" {Name} is {_currentstatus}");
+            Console.WriteLine($" {_name} is {_currentstatus}");
         }
         public void Attack()
         {
-            Console.WriteLine($"{Name} is attacks");
+            Console.WriteLine($"{_name} is attacks");
+        }
+        public string SayName(string commanderRank)
+        {
+            if (commanderRank.ToLower() == "general")
+            {
+                return _name;
+            }
+            else if (commanderRank.ToLower() == "colonel")
+            {
+                return _codeName;
+            }
+            else
+            {
+                return $"Classified information no access";
+            }
         }
     }
 }
