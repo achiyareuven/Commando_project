@@ -15,7 +15,7 @@ namespace Commando_project
     internal class Commando
     {
         private string _name;
-        public string _codeName { get ; set; }
+        public string _codeName { get ;private set; }
         private string[] _tools = { "Hammer, chisel, rope, bag, water bottle"};
         private Status _currentstatus;
 
