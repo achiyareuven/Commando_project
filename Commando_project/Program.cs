@@ -10,10 +10,18 @@ namespace Commando_project
     {
         static void Main(string[] args)
         {
-            Commando c = new Commando("aaa","jk");
-            Console.WriteLine(c._codeName);
-            c._codeName = "hhh";
-            Console.WriteLine(c.SayName("GENERAL"));
+            Commando c = new Commando("aaa", "jk");
+            AirCommando a = new AirCommando("fgh", "yy");
+            SeaCommando s = new SeaCommando("jhj", "jj");
+            //a.Attack();
+            //c.Attack();
+            //s.Attack();
+            Commando[] commandos = { c ,a,s};
+            foreach (var command in commandos)
+            {
+                command.Attack();
+            }
         }
+
     }
 }
